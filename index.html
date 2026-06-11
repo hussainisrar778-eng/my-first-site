@@ -1,18 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Israr Hussain - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #030a16; /* Dark background under the curve */
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Top Header Section with Gradient */
+        .header-section {
+            width: 100%;
+            background: linear-gradient(to bottom, #163643, #162a35);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 5px solid #0b1a24;
+        }
+
+        .profile-container {
+            margin-bottom: 15px;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: #a0c4d6;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* Services Cards Grid */
+        .main-container {
+            max-width: 1100px;
+            width: 100%;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Card Top Borders Like Reference Image */
+        .card-data-entry { border-top: 6px solid #ff9800; }
+        .card-inventory { border-top: 6px solid #e67e22; }
+        .card-chatbot { border-top: 6px solid #00bcd4; }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .card-data-entry .card-icon { color: #ff9800; }
+        .card-inventory .card-icon { color: #e67e22; }
+        .card-chatbot .card-icon { color: #00bcd4; }
+
+        .card h3 {
+            color: #0f2a4a;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Action/Contact Buttons Section */
+        .cta-section {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            min-width: 240px;
+        }
+
+        .btn i {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd58;
+            transform: scale(1.03);
+        }
+
+        .btn-linkedin {
+            background-color: #0077B5;
+            box-shadow: 0 4px 20px rgba(0, 119, 181, 0.4);
+        }
+
+        .btn-linkedin:hover {
+            background-color: #006396;
+            transform: scale(1.03);
+        }
+
+        /* Responsive Fix for Mobile screens */
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .cta-section { flex-direction: column; width: 100%; align-items: center; }
+            .btn { width: 100%; }
+        }
+    </style>
 </head>
 <body>
-    <h1>mera pehla HTML code chal gaya</h1>
-<p>israr ab development seekh raha ha.</p>
-<img src="Capture.PNG" alt="my pic" width="300">
-<br>
-<a href="about.html"> mere baare ma janieye (about me)</a>
 
+    <div class="header-section">
+        <div class="profile-container">
+            <img src="my profile.jpeg.jpeg" alt="Israr Hussain" class="profile-img">
+        </div>
+        <h1>Israr Hussain</h1>
+        <div class="subtitle">Freelance Developer & AI Chatbot Expert</div>
+    </div>
 
+    <div class="main-container">
+        
+        <div class="services-grid">
+            
+            <div class="card card-data-entry">
+                <div class="card-icon"><i class="fa-solid fa-keyboard"></i></div>
+                <h3>Data Entry Specialist</h3>
+                <p>Accurate data entry, web research, copy paste work, and professional data management inside Excel and Google Sheets.</p>
+            </div>
 
+            <div class="card card-inventory">
+                <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                <h3>Inventory Management</h3>
+                <p>Advanced stock tracking, e-commerce product listing, dashboard creation, and automated sheet organization.</p>
+            </div>
+
+            <div class="card card-chatbot">
+                <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                <h3>AI Chatbot Development</h3>
+                <p>Smart and responsive AI chatbots using Voiceflow and OpenAI integration to automate 24/7 client customer support.</p>
+            </div>
+
+        </div>
+
+        <div class="cta-section">
+            <a href="https://wa.me/923401806034" target="_blank" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            
+            <a href="https://www.linkedin.com/in/israr-hussain" target="_blank" class="btn btn-linkedin">
+                <i class="fa-brands fa-linkedin"></i> View LinkedIn Profile
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
